@@ -40,7 +40,7 @@
     font-size: 28px;
 }
 
-.option-container {
+.choice-container {
     display: flex;
     margin: 2rem;
     font-size: 1.8rem;
@@ -48,24 +48,37 @@
     border: 1px solid white;
 }
 
-.option-container:hover {
-    box-shadow: 2px 2px 2px white;
+.choice-container:hover {
+    box-shadow: 1px 1px 1px white;
     cursor: pointer;
 }
 
-.option-container {
-    margin-top: 1rem;
-}
 
-.option-choice {
+.choice-prefix {
     padding: 1rem 1.5rem;
     font-weight: bold;
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
-.option-text {
+.choice-text {
     padding: 1rem;
+    width: 100%;
+}
+
+.correct {
+    border: 2px solid green;
+    box-shadow: 3px solid green;
+}
+
+.correct:hover,
+.incorrect:hover {
+    box-shadow: none;
+}
+
+.incorrect {
+    border: 2px solid red;
+    box-shadow: 3px solid red;
 }
 
 
