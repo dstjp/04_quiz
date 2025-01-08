@@ -81,5 +81,33 @@
     box-shadow: 3px solid red;
 }
 
+/* HUD */
 
+#hud {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
 
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3.4rem;
+    border: 1px solid white;
+}
+
+#progressBarFull {
+    height: 3.4rem;
+    background-color: white;
+    width: 0%;
+}
