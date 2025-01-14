@@ -111,3 +111,41 @@
     background-color: white;
     width: 0%;
 }
+
+/* End Page */
+.end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid white;
+}
+
+#finalScore {
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    font-size: 48px;
+}
+
+form {
+    margin: 1rem;
+}
+
+#username {
+    border: 1px solid white;
+    height: 1.5rem;
+    width: 10rem;
+    padding: 0.25rem;
+}
+
+.submitBtn {
+    border: none;
+    color: gray;
+    font-size: 18px;
+}
+
+.submitBtn:hover {
+    color: white;
+    cursor: pointer;
+}
