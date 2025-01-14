@@ -13,32 +13,16 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-let questions = [
-    {
-        question: "Why do bears poop in the woods?",
-        choice1: "Cause they want to",
-        choice2: "Beause they have to",
-        choice3: "IDK it's not like they have a choice",
-        choice4: "What kind of question is that?",
-        answer: 1
-    },
-    {
-        question: "Why do a backflip when you can do a front flip?",
-        choice1: "Don't tell me what to do",
-        choice2: "Seriously, wtf is this question?",
-        choice3: "Backflips are cooler",
-        choice4: "Dragon",
-        answer: 3
-    },
-    {
-        question: "Favorite animal?",
-        choice1: "Tiger",
-        choice2: "Bear",
-        choice3: "Waterbottle",
-        choice4: "Jesus Christ",
-        answer: 4
-    },
-];
+let questions = [];
+
+fetch("questions.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(loadedQuestions => {
+        questions = loadedQuestions;
+        startGame();
+})
 
 const correct = 10;
 const maxQuestions = 3;
@@ -55,7 +39,7 @@ getNewQuestion = () => {
     //redirect to end page
     if(availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         localStorage.setItem('mostRecentScore', score);
-        return window.location.assign("/end.html")
+        return window.location.assign("/end/end.html")
     } 
 
     questionCounter++;
@@ -111,7 +95,5 @@ incrementScore = num => {
     scoreText.innerText = score;
 }
 
-
-startGame();
 
 
